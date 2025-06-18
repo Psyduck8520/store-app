@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-img',
   templateUrl: './img.component.html',
   styleUrls: ['./img.component.scss']
 })
-export class ImgComponent {
-
+export class ImgComponent  implements OnInit  {
+  @Input() img: string = 'Valor init ';
+  ngOnInit() {
+  }
 }
