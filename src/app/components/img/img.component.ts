@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit,Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -6,7 +6,21 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./img.component.scss']
 })
 export class ImgComponent  implements OnInit  {
-  @Input() img: string = 'Valor init ';
+  @Input() img: string = '';
+  @Output() loaded = new EventEmitter<string>();
+
+  imageDefault  = "./assets/images/default.png";
+  constructor(){
+
+  }
   ngOnInit() {
+  }
+  imgError (){
+    this.img =  this.imageDefault;
+  }
+  imgLoaded( ){
+    console.log("Log hijo");
+    this.loaded.emit(this.img); // a le estamos pasando
+    // la URL del hijo
   }
 }
