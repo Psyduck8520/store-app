@@ -8,6 +8,9 @@ import {Product} from "./models/product.model";
 })
 export class AppComponent {
 
+  imgParent = '';
+  showImg   = true;
+
 
   products: Product[] = [
     {
@@ -54,8 +57,11 @@ export class AppComponent {
     }
   ]
 
-  imgParent = '';
   onLoaded(img: string) {
     console.log('Log  padre', img);
+  }
+
+  toggleImg(){
+     this.showImg = !this.showImg;
   }
 }
