@@ -1,8 +1,8 @@
 .products--grid{
   display: flex;
   flex-direction: column;
-}
 
+}
 
 //tablets
   @media  screen and (min-width: 40em) and (max-width: 36.9em)  {
@@ -20,3 +20,5 @@
     grid-gap: 15px;
   }
 }
+
+
