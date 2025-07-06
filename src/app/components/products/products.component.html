@@ -1,11 +1,12 @@
 <p>
-  La cantidad {{myShoppingCart.length}}
+  La cantidad {{ myShoppingCart.length }}
 </p>
-
 <p>
-  El total es {{total}}
+  El total es {{ total }}
 </p>
-
+<p>
+  Taday :  {{ today| date : 'short' }}
+</p>
 <div class="products--grid">
   <app-product [product]="product"
                *ngFor="let product of products"
