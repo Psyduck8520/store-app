@@ -5,8 +5,12 @@
   El total es {{ total }}
 </p>
 <p>
-  Taday :  {{ today| date : 'short' }}
+  Today :  {{ today| date : 'short' }}
 </p>
+<p>
+  Today :  {{ today| timeAgo }}
+</p>
+
 <div class="products--grid">
   <app-product [product]="product"
                *ngFor="let product of products"
